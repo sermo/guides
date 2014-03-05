@@ -80,17 +80,10 @@ are encouraged. In order to modify this document, do the following:
 
   foobar(
     :positional_1,
-    :postional_2,
-    :postional_3,
+    :positional_2,
+    :positional_3,
   )
 
-  foobar(:positional,
-    :named_1 => 1,
-    :named_2 => 2,
-    :named_3 => 3,
-  )
-
-  # STILL OK
   foobar(
     :positional,
     :named_1 => 1,
@@ -98,17 +91,17 @@ are encouraged. In order to modify this document, do the following:
     :named_3 => 3,
   )
 
-  # NOT GOOD
-  foobar(:position, :named_1 => 1,
+  # ALSO GOOD
+  foobar(:positional,
+    :named_1 => 1,
     :named_2 => 2,
     :named_3 => 3,
   )
 
-  # PUNCHABLE
-  foobar(:position, :named_1 => 1,
+  # NOT GOOD
+  foobar(:positional, :named_1 => 1,
     :named_2 => 2,
-    :named_3 => 3, :named_4 => 4, :named_5 => 5,
-    :named_6 => 6,
+    :named_3 => 3,
   )
   ```
 * Avoid semicolons
