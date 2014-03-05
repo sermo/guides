@@ -101,14 +101,14 @@ are encouraged. In order to modify this document, do the following:
   # NOT GOOD
   foobar(:position, :named_1 => 1,
     :named_2 => 2,
-    :named_3 => 3
+    :named_3 => 3,
   )
 
   #PUNCHABLE
   foobar(:position, :named_1 => 1,
     :named_2 => 2,
     :named_3 => 3, :named_4 => 4, :named_5 => 5,
-    :named_6 => 6
+    :named_6 => 6,
   )
   ```
 * Avoid semicolons
