@@ -104,7 +104,7 @@ are encouraged. In order to modify this document, do the following:
     :named_3 => 3,
   )
 
-  #PUNCHABLE
+  # PUNCHABLE
   foobar(:position, :named_1 => 1,
     :named_2 => 2,
     :named_3 => 3, :named_4 => 4, :named_5 => 5,
