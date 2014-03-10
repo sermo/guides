@@ -23,7 +23,7 @@
 * Commit messages should explain 'why' more than they explain 'what'
 * Mark commits that so not have an associated story or defect with some kind of
   marker that identifes what the commit is for:
-  * OPPREF: Opportunisitc refactoring.
+  * OPPREF: Opportunistic refactoring.
   * DEVOPS: Work related to devops things.
   * FORMAT: Formatting only commits. 
 * Add link to story or defect at the end of the commit message
