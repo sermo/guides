@@ -55,7 +55,8 @@ are encouraged. In order to modify this document, do the following:
 * Include a space before and after the argument delimiters (`|`) on blocks
 * Use spaces around operators, after commas, and after colons
 * Use `def self.method`, not `def Class.method` or `class << self`.
-* Use `def` with parentheses when there are arguments to the methods, and use  no parentheses when the method does not take any parameters.
+* Use `def` with parentheses when there are arguments to the methods, and use  
+  no parentheses when the method does not take any parameters.
 
 ## Guides
 
@@ -63,8 +64,8 @@ are encouraged. In order to modify this document, do the following:
   whole method on one screen, the method is too long.
 * Favor single quotes for strings, only use double quotes only when interpolating
 * Don't vertically align tokens on consecutive lines.
-* If you break up an argument list, keep the arguments (including the first argument) on their own lines and
-  closing parenthesis on its own line.
+* If you break up an argument list, keep the arguments (including the first argument) 
+  on their own lines and closing parenthesis on its own line.
   ```ruby
   # bad 
   foo = create(:foo, 
