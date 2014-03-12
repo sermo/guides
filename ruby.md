@@ -55,8 +55,7 @@ are encouraged. In order to modify this document, do the following:
 * Include a space before and after the argument delimiters (`|`) on blocks
 * Use spaces around operators, after commas, and after colons
 * Use `def self.method`, not `def Class.method` or `class << self`.
-* Use `def` with parentheses when there are arguments to the methods, and use
-  no parenthese when the method does not take any parameters.
+* Use `def` with parentheses when there are arguments to the methods, and use  no parentheses when the method does not take any parameters.
 
 ## Guides
 
@@ -64,11 +63,37 @@ are encouraged. In order to modify this document, do the following:
   whole method on one screen, the method is too long.
 * Favor single quotes for strings, only use double quotes only when interpolating
 * Don't vertically align tokens on consecutive lines.
-* If you break up an argument list, keep the arguments on their own lines and
-  closing parenthesis on its own line. (TODO: examples, include hashes and arrays)
+* If you break up an argument list, keep the arguments (including the first argument) on their own lines and
+  closing parenthesis on its own line.
+  ```ruby
+  # bad 
+  foo = create(:foo, 
+    :bar => "fakeline1",
+    :baz => "12345")
+  
+  # good
+  foo = create(
+    :foo,
+    :bar => "fakeline1",
+    :baz => "12345"
+  )
+  ```
 * Indent continued lines two spaces.
-* On multi-line method calls, put the first parameter on its own line, not on
-  the same line as the method call.
+  ```ruby
+  # bad
+  thisisareallylongvariablename = foo(
+                                      :bar,
+                                      :baz => 'something',
+                                      :zomg => 'yarly'
+                                      )
+
+  # good
+  thisisareallylongvariablename = foo(
+    :bar,
+    :baz => 'somthing',
+    :zomg => 'yarly'
+  )
+  ```
 * Avoid semicolons
 * Avoid single line methods ie: `def foo; 'zomg'; end`
 * Include a space before the `{` for single-line blocks
