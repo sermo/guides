@@ -42,21 +42,124 @@ are encouraged. In order to modify this document, do the following:
 
 * Use UTF-8 encoding
 * Use Unix-style line endings.
-* Avoid inline comments
+* Avoid comments at the end of a line
+
+  ```Ruby
+  # bad
+  team = manager + players # combine the manager and players to form the whole team
+
+  # good
+
+  # combine the manager and players to form the whole team
+  team = manager + players
+  ```
+
 * Break long lines after 80 characters, but if 80 isn't possible, break at 100
   characters as a hard limit.
 * Delete trailing whitespace.
+
 * Don't include spaces after `(`, `[` or before `]`, `)`.
+
+  ```Ruby
+  # bad
+  foo = Foo.new( 123 )
+  first = list[ 0 ]
+
+  # good
+  foo = Foo.new(123)
+  first = list[0]
+  ```
+
 * Use 2-space soft tabs. Do not use tabs to indent.
 * Indent private methods equal to public methods.
+
+  ```Ruby
+  # bad
+  class Foo
+
+    def some_public_method
+    end
+
+    private
+
+      def some_private_method
+      end
+  end
+
+  # good
+
+  class Foo
+
+    def some_public_method
+    end
+
+    private
+
+    def some_private_method
+    end
+  end
+  ```
+
 * Use one empty line between methods.
 * Use spaces after `{` and before `}`
+
+  ```Ruby
+  # bad
+  ['hello', 'world'].each{|e| puts e}
+
+  # good
+  ['hello', 'world'].each { |e| puts e }
+  ```
+
 * Use `do`/`end` for multiline blocks, and curly braces for for single line blocks.
+
+  ```Ruby
+  # bad
+  [1, 2, 3].each do |i| puts i; end
+
+  [1, 2, 3].each { |i|
+    puts i
+    puts 2 * i
+  }
+
+  # good
+  [1, 2, 3].each do |i|
+    puts i
+  end
+
+  [1, 2, 3].each { |i| puts i }
+  ```
+
 * Include a space before and after the argument delimiters (`|`) on blocks
+
+  ```Ruby
+  # bad
+  list.map {|i| i * 2}
+
+  # good
+  list.map { |i| i * s }
+  ```
+
 * Use spaces around operators, after commas, and after colons
-* Use `def self.method`, not `def Class.method` or `class << self`.
+
+  ```Ruby
+  sum = 1 + 2
+  list = [1, 2, 3]
+  ```
+
+* When declaring class methods, use `def self.method`, not `def Class.method` or `class << self`.
 * Use `def` with parentheses when there are arguments to the methods, and use
   no parenthese when the method does not take any parameters.
+
+  ```Ruby
+  def sum(a, b)
+    a + b
+  end
+
+  def say_hello
+    puts "hello"
+  end
+  ```
 
 ## Guides
 
@@ -64,16 +167,43 @@ are encouraged. In order to modify this document, do the following:
   whole method on one screen, the method is too long.
 * Favor single quotes for strings, only use double quotes only when interpolating
 * Don't vertically align tokens on consecutive lines.
+
+  ```Ruby
+  # bad
+  age       = 37
+  full_name = 'Homer Simpson'
+
+  # good
+  age = 37
+  full_name = 'Homer Simpson'
+  ```
+
 * If you break up an argument list, keep the arguments on their own lines and
   closing parenthesis on its own line. (TODO: examples, include hashes and arrays)
 * Indent continued lines two spaces.
 * On multi-line method calls, put the first parameter on its own line, not on
   the same line as the method call.
 * Avoid semicolons
-* Avoid single line methods ie: `def foo; 'zomg'; end`
+* Avoid single line methods
+
+  ```Ruby
+  # bad
+  def say_hello; puts 'hello'; end
+
+  # good
+  def say_hello
+    puts 'hello'
+  end
+  ```
+
 * Include a space before the `{` for single-line blocks
 * Use uppercase for SQL key words and lowercase for SQL identifiers.
-* Avoid SQL whereever possible
+
+  ```SQL
+  SELECT COUNT(*) FROM users WHERE age > 35;
+  ```
+
+* Avoid SQL wherever possible
 * Avoid conditional modifiers (lines that end with conditionals). Is using them,
   keep them short -- make sure they have only one clause on the left, and one
   on the right.
