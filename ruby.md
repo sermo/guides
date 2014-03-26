@@ -181,6 +181,21 @@ are encouraged. In order to modify this document, do the following:
 * If you break up an argument list, keep the arguments on their own lines and
   closing parenthesis on its own line. (TODO: examples, include hashes and arrays)
 * Indent continued lines two spaces.
+*   ```ruby
+  # bad
+  thisisareallylongvariablename = foo(
+                                      :bar,
+                                      :baz => 'something',
+                                      :orly => 'yarly'
+                                      )
+
+  # good
+  thisisareallylongvariablename = foo(
+    :bar,
+    :baz => 'somthing',
+    :orly => 'yarly'
+  )
+  ```
 * On multi-line method calls, put the first parameter on its own line, not on
   the same line as the method call. Unless the first argument is positional and the
   following are all named, e.g.:
