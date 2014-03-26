@@ -182,7 +182,42 @@ are encouraged. In order to modify this document, do the following:
   closing parenthesis on its own line. (TODO: examples, include hashes and arrays)
 * Indent continued lines two spaces.
 * On multi-line method calls, put the first parameter on its own line, not on
-  the same line as the method call.
+  the same line as the method call. Unless the first argument is positional and the
+  following are all named, e.g.:
+  ```ruby
+  # GOOD
+  foobar(
+    :named_1 => 1,
+    :named_2 => 2,
+    :named_3 => 3,
+  )
+
+  foobar(
+    :positional_1,
+    :positional_2,
+    :positional_3,
+  )
+
+  foobar(
+    :positional,
+    :named_1 => 1,
+    :named_2 => 2,
+    :named_3 => 3,
+  )
+
+  # ALSO GOOD
+  foobar(:positional,
+    :named_1 => 1,
+    :named_2 => 2,
+    :named_3 => 3,
+  )
+
+  # NOT GOOD
+  foobar(:positional, :named_1 => 1,
+    :named_2 => 2,
+    :named_3 => 3,
+  )
+  ```
 * Avoid semicolons
 * Avoid single line methods
 
