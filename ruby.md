@@ -261,4 +261,10 @@ are encouraged. In order to modify this document, do the following:
   ```
 * Avoid explicit return statements at the end of a method.
 * Create bang methods only where there's a non-bang counterpart.
+* If you break up a chain of method invocations, keep each method invocation on its own line. Place the . at the end of each line, except the last.
+  ```ruby
+  User.
+    includes(...).
+    find(...)
+  ```
 
