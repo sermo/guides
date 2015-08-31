@@ -73,7 +73,7 @@ A--F--G--H--I                 (master)
                B'--C'--D'--E' (feature)
 ```
 
-Note that the commits B, C, D, and E have been replace by B', C', D', E'.  The
+Note that the commits B, C, D, and E have been replaced by B', C', D', E'.  The
 content of these commits is the same as they previously were, but the SHAs of
 each commit has changed because the entire git history has changed.
 
@@ -98,10 +98,35 @@ for your feature branch, but you should cut this down to a single message
 using the standard commit message format (50-character first line, blank
 line, then more descriptive paragraphs limited to 72-character lines).
 
+```
+# Bad
+Squashed commit of the following:
+
+commit 15f261f85263003de459d9c8a19def004782519f
+Author: Joe Programmer <joe.programmer@sermo.com>
+Date:   Mon Aug 31 15:29:16 2015 -0400
+
+    WIP
+
+commit 373b1e00d7b0341dd618fd981701effb988900ee
+Author: Joe Programmer <joe.programmer@sermo.com>
+Date:   Mon Aug 31 15:29:08 2015 -0400
+
+    fix css issues
+```
+
+```
+# Good
+SM-2000: fix homepage alignment issues in IE8
+
+The main login form was aligned to the left of the screen in IE8.
+Updated the IE8-specific css to keep the form centered.
+```
+
 Now commit J contains all of the functionality of the feature branch.
 Rebasing branches and squash merges help keep the master history clean.
 
-Note that when you rebase your branch, you are effectively creating replacing
+Note that when you rebase your branch, you are effectively replacing
 your commits and re-creating a new history for your branch.  For this reason,
 be careful when rebasing a branch that is being worked on by multiple
 developers and be sure to coordinate your work accordingly.
