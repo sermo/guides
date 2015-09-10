@@ -1,3 +1,3 @@
-# WorldOne Style Guides
+# SERMO Style Guides
 
-This repository contains a set of guidlines for writing code at WorldOne.
+This repository contains a set of guidlines for writing code at SERMO.
