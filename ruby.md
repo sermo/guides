@@ -1,9 +1,9 @@
-# WorldOne Ruby Style Guide
+# SERMO Ruby Style Guide
 
 ## Introduction
 
 This document presents a set of team-approved conventions for writing Ruby
-code at WorldOne. The goal of setting standards for code formatting and
+code at SERMO. The goal of setting standards for code formatting and
 organzation is maintainable code. When code is readable, consistent,
 predictable, and understandable it is by nature more maintainable. By producing
 more maintainable code, we thus produce code that is more easily changed, more
