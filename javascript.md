@@ -193,11 +193,11 @@ are encouraged. In order to modify this document, do the following:
     ```javascript
     // BAD
     var age       = 37;
-    var full_name = "Homer Simpson";
+    var fullName = "Homer Simpson";
 
     // GOOD
     var age = 37;
-    var full_name = "Homer Simpson";
+    var fullName = "Homer Simpson";
     ```
 
 * If you break up an argument list, keep the arguments on their own lines and
