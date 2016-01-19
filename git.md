@@ -13,6 +13,9 @@
   * US1234: Allow users to log into the site
 * When including bulleted lists in a commit message, denote each item with an
   asterisk. Do not include an empty newline between bullet points.
+* When branching include your initials in the first part of the branch name and
+  give the branch a meaningful topic name prefixed by the topic number
+  e.g. `bam/sm-123-truncating-all-the-data`
 
 ## Guides
 
